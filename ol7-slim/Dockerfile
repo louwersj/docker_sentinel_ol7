@@ -25,6 +25,9 @@ RUN \
 # Cleanup dependencies
 RUN yum -y erase gcc cc tar gzip
 
+# clean the YUM cache.
+RUN yum clean all
+
 # Define mountable directories
 VOLUME ["/data"]
 
